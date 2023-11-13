@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>work</title>
+    <!-- favicon -->
+    <link rel="stylesheet" href="img/favicon_sa.png">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .img_box {
+            max-width: 900px;
+            width: 80%;
+
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        div img {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .info {
+            width: auto;
+
+            position: fixed;
+            right: 100px;
+            bottom: 250px;
+
+        }
+
+        .fixed {
+            position: fixed;
+            right: 100px;
+            bottom: 100px;
+        }
+
+        .fixed:hover {
+            opacity: 0.8;
+        }
+
+        .fixed2 {
+            position: fixed;
+            right: 100px;
+            bottom: 40px;
+        }
+
+        .fixed2:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="img_box">
+        <img src="img/ad1.png" alt="img">
+    </div>
+
+    <!-- <div class="info">
+        <img src="img/" alt="img">
+    </div> -->
+
+    <div class="top fixed">
+        <a href="#"><img src="img/top_btn.png" alt="top"></a>
+    </div>
+    <div class="fixed2">
+        <a href="../index.html#projects" onclick="window.close()"><img src="img/exit.png" alt="back"></a>
+    </div>
+    
+    <script>
+        $(function () {
+            $(".top>a").click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500);
+                return false;
+            });
+            $(window).scroll(function () {
+                var height = $(window).scrollTop();
+                if (height > 100) {
+                    $('.top').fadeIn();
+                } else {
+                    $('.top').fadeOut();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
